@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info - Ferienwohnung im Lötschental</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <div class="page-wrapper">
@@ -23,11 +25,18 @@
                     <li><a href="live.html" data-translate="nav_live">Live</a></li>
                 </ul>
             </nav>
+            <div class="lang-switcher">
+                <a href="#" lang="de">DE</a>
+                <a href="#" lang="en">EN</a>
+                <a href="#" lang="fr">FR</a>
+            </div>
         </aside>
 
         <div class="content-area">
             <header class="content-header">
-                <div class="lang-switcher">
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation"
+                    aria-expanded="false"><span></span><span></span><span></span></button>
+                <div class="lang-switcher desktop-only">
                     <a href="#" lang="de">DE</a>
                     <a href="#" lang="en">EN</a>
                     <a href="#" lang="fr">FR</a>
@@ -41,27 +50,37 @@
                         <div>
                             <h3 data-translate="info_features_title">Ausstattung & Preise</h3>
                             <ul class="info-list">
-                                <li><strong data-translate="info_feature_area">Wohnfläche:</strong> <span data-translate="info_value_area">ca. 50m²</span></li>
-                                <li><strong data-translate="info_feature_rooms">Zimmer:</strong> <span data-translate="info_value_rooms">2...</span></li>
-                                <li><strong data-translate="info_feature_persons">Personen:</strong> <span data-translate="info_value_persons">Ideal für 2-4...</span></li>
-                                <li><strong data-translate="info_feature_kitchen">Küche:</strong> <span data-translate="info_value_kitchen">Voll ausgestattet</span></li>
-                                <li><strong data-translate="info_feature_bathroom">Badezimmer:</strong> <span data-translate="info_value_bathroom">Dusche / WC</span></li>
-                                <li><strong data-translate="info_feature_balcony">Balkon:</strong> <span data-translate="info_value_balcony">Grosser Südbalkon...</span></li>
-                                <li><strong data-translate="info_feature_included">Inklusive:</strong> <span data-translate="info_value_included">WLAN, TV...</span></li>
-                                <li><strong data-translate="info_feature_price">Preis pro Nacht:</strong> <span data-translate="info_value_price">auf Anfrage</span></li>
-                                <li><strong data-translate="info_feature_tourist_tax">Endreinigung:</strong> <span data-translate="info_value_tourist_tax">auf Anfrage</span></li>
+                                <li><strong data-translate="info_feature_area">Wohnfläche:</strong> <span
+                                        data-translate="info_value_area">ca. 50m²</span></li>
+                                <li><strong data-translate="info_feature_rooms">Zimmer:</strong> <span
+                                        data-translate="info_value_rooms">2...</span></li>
+                                <li><strong data-translate="info_feature_persons">Personen:</strong> <span
+                                        data-translate="info_value_persons">Ideal für 2-4...</span></li>
+                                <li><strong data-translate="info_feature_kitchen">Küche:</strong> <span
+                                        data-translate="info_value_kitchen">Voll ausgestattet</span></li>
+                                <li><strong data-translate="info_feature_bathroom">Badezimmer:</strong> <span
+                                        data-translate="info_value_bathroom">Dusche / WC</span></li>
+                                <li><strong data-translate="info_feature_balcony">Balkon:</strong> <span
+                                        data-translate="info_value_balcony">Grosser Südbalkon...</span></li>
+                                <li><strong data-translate="info_feature_included">Inklusive:</strong> <span
+                                        data-translate="info_value_included">WLAN, TV...</span></li>
+                                <li><strong data-translate="info_feature_price">Preis pro Nacht:</strong> <span
+                                        data-translate="info_value_price">auf Anfrage</span></li>
+                                <li><strong data-translate="info_feature_tourist_tax">Endreinigung:</strong> <span
+                                        data-translate="info_value_tourist_tax">auf Anfrage</span></li>
                             </ul>
                         </div>
                         <div class="info-images">
                             <h3 data-translate="info_images_title">Lage & Grundriss</h3>
-                            <p data-translate="info_images_text">Die Wohnung befindet sich an zentraler und doch ruhiger Lage...</p>
+                            <p data-translate="info_images_text">Die Wohnung befindet sich an zentraler und doch ruhiger
+                                Lage...</p>
                             <img src="" alt="Lage der Ferienwohnung" id="image-location">
                             <img src="" alt="Grundriss der Wohnung" id="image-floorplan">
                         </div>
                     </div>
                 </section>
             </main>
-    
+
             <footer>
                 <p>
                     <strong data-translate="footer_contact_title">Kontakt & Adresse</strong><br>
@@ -69,7 +88,8 @@
                     E-Mail: <a href="mailto:loetschental@alpenwohnung.ch">loetschental@alpenwohnung.ch</a>
                 </p>
                 <p>
-                    <a href="https://www.loetschental.ch/" id="link-loetschental" target="_blank" data-translate="footer_link">Entdecken Sie das magische Lötschental</a>
+                    <a href="https://www.loetschental.ch/" id="link-loetschental" target="_blank"
+                        data-translate="footer_link">Entdecken Sie das magische Lötschental</a>
                 </p>
                 <p>&copy; <span id="copyright-year">2025</span> Alpen-Wohnung.ch</p>
             </footer>
@@ -78,4 +98,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>

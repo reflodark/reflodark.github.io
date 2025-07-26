@@ -155,6 +155,19 @@ const content = {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    // --- MOBILE NAVIGATION TOGGLE ---
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (navToggle && sidebar) {
+        navToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('is-open');
+            // Update aria-expanded attribute for accessibility
+            const isExpanded = sidebar.classList.contains('is-open');
+            navToggle.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+
     // --- RENDER FUNCTION ---
     function renderContent(lang) {
         // Update all elements with a 'data-translate' attribute
@@ -277,9 +290,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- EVENT LISTENERS & INITIALIZATION ---
 
     // Language switcher logic
-    const langSwitcher = document.querySelector('.lang-switcher');
-    if (langSwitcher) {
-        langSwitcher.addEventListener('click', function (e) {
+    // Add event listener to all language switchers (desktop header and mobile sidebar)
+    document.querySelectorAll('.lang-switcher').forEach(switcher => {
+        switcher.addEventListener('click', function (e) {
             e.preventDefault();
             const target = e.target.closest('a');
             if (target && !target.classList.contains('active')) {
@@ -287,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 renderContent(lang);
             }
         });
-    }
+    });
 
     // Dynamic links
     function updateDynamicLink() {
